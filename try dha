@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Code Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/FullMoon2010.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: blue;
+            color: white;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>Enter the Secret Code</h2>
+        <input type="text" id="codeInput" placeholder="Enter code">
+        <button onclick="checkCode()">Submit</button>
+        <div id="output"></div>
+    </div>
+    
+    <script>
+        function checkCode() {
+            const userInput = document.getElementById("codeInput").value;
+            if (userInput === "9:29") {
+                document.getElementById("output").innerHTML = "<span>mentleaa oooh mentaleaa mentleaa</span>";
+            } else {
+                document.getElementById("output").innerHTML = "<span style='color:red'>Try again</span>";
+            }
+        }
+    </script>
+</body>
+</html>
